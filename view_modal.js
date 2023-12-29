@@ -7,7 +7,7 @@ export function render(obj) {
     // console.log(obj);
 
     // console.log("from render", obj);
-    displayArea.innerHTML += `<label>${obj.itemDescription} , ${obj.amounts }<label/><br/>`
+    displayArea.innerHTML += `<label>${obj.itemDescription} , ${obj.amounts} ${obj.flag}<label/><br/>`
 
 
 }

@@ -31,7 +31,7 @@ function addItemByUserController() {
     myList.setNewItem(item)
     console.log(myList);
     let Iobj = myList.getItemObj()
-    // console.log("test", Iobj);
+
     render(Iobj)
 
 

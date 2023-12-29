@@ -11,6 +11,7 @@ export class ShoppingList {
         this.itemArry.push(item)
         this.index = this.itemArry.length - 1
         console.log(this.index);
+        
 
     }
 
