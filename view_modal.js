@@ -1,3 +1,8 @@
-//display on shoppingList
 
-let displayArea = document.getElementById("shoppingList")
+let displayArea = document.getElementById("display-area")
+
+export function render(obj) {
+
+    displayArea.innerHTML += `${obj}`
+}
+

@@ -4,54 +4,27 @@ export class ShoppingList {
         this.itemArry = [];
         this.index
         this.obj
-        // this.arrayObeject = {}
 
     }
 
     setNewItem(item) {
         this.itemArry.push(item)
         this.index = this.itemArry.length
-
-        // console.log("Item from service", this.itemArry);
-        // console.log("index", this.index);
-        this.#displayItem(this.index)
+        console.log("from set item", this.itemArry);
     }
 
-    #displayItem(id) {
-
-        // console.log("=========================", id);
-        this.obj = this.itemArry[id - 1];
-
-        this.render = `
-         ${this.index} | ${this.obj.itemDescription} | ${this.obj.amounts}  |
-
-
-
-
-
-        `
-        console.log(this.render);
-
-
+    getItemArray() {
+        console.log("from GET", this.itemArry);
+        return this.itemArry;
     }
-
-
-    // getItemArray() {
-    //     return this.itemArray;
-    // }
 
     deleteItemArry(id) {
 
-        const filteredArry = this.itemArry.splice(id)
-
-
-        // const result = this.itemArry.filter((id) => word === id);
-        // console.log("result of delete item from arry", result);
-        console.log("from delete", filteredArry);
+        this.itemArry.splice(id, 1)
+        console.log("from delete", this.itemArry);
 
     }
 
-    // importedList(jsonFile) { }
 
 
 
