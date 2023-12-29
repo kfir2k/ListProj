@@ -11,13 +11,17 @@ function addItemByUserController() {
 
     const userItemInput = document.getElementById("userInput");
     const text = userItemInput.value.replace(/[0-9]/g, '');
-    const number = userItemInput.value.replace(/\D/g, '')
+    const number = userItemInput.value.replace(/\D/g, '');
+    const inputElement = `<input type="checkbox" name="" id="">`;
 
     const item = {
 
         itemDescription: text,
         amounts: number,
-        status: false
+        status: false,
+        flag: inputElement
+
+
 
     }
     userItemInput.value = ""
@@ -27,7 +31,7 @@ function addItemByUserController() {
     myList.setNewItem(item)
     console.log(myList);
     let Iobj = myList.getItemObj()
-    console.log("test", Iobj);
+    // console.log("test", Iobj);
     render(Iobj)
 
 

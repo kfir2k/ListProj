@@ -9,8 +9,9 @@ export class ShoppingList {
 
     setNewItem(item) {
         this.itemArry.push(item)
-        this.index = this.itemArry.length
-        // console.log("from set item", this.itemArry);
+        this.index = this.itemArry.length - 1
+        console.log(this.index);
+
     }
 
     getItemObj() {
