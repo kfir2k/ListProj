@@ -2,15 +2,9 @@ import { ShoppingList } from './services.js'
 import { render } from './view_modal.js'
 
 let myList = new ShoppingList();
-document.getElementById('myForm').addEventListener('submit', event => {
-    event.preventDefault()
-    addItemByUserController()
+document.getElementById('myForm').addEventListener('submit', event => { event.preventDefault(), addItemByUserController() });
 
-});
 const userClick = document.getElementById("submitBtn").addEventListener("click", addItemByUserController);
-
-
-
 
 
 function addItemByUserController() {
@@ -29,11 +23,13 @@ function addItemByUserController() {
     userItemInput.value = ""
 
 
-    
+
     myList.setNewItem(item)
-    let array = myList.getItemArray()
-    console.log("from main", array);
-    // render(array)
+    console.log(myList);
+    let Iobj = myList.getItemObj()
+    console.log("test", Iobj);
+    render(Iobj)
+
 
 
 
