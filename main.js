@@ -27,10 +27,44 @@ function addItemByUserController() {
     }
     userItemInput.value = ""
     myList.setNewItem(item)
-    myList.displayItem(1)
+
+
 
 
 }
+const item = {
+
+    itemDescription: "item 1111111111111111111",
+    amounts: "number",
+    status: false
+
+}
+const item2 = {
+
+    itemDescription: "item 222222222222222222",
+    amounts: "nubmer",
+    status: false
+
+}
+const item3 = {
+
+    itemDescription: "item 33333333333333333333333",
+    amounts: "nubmer",
+    status: false
+
+}
+
+myList.setNewItem(item)
+myList.setNewItem(item2)
+myList.setNewItem(item3)
+myList.deleteItemArry(2)
+
+
+function deleteItemByUserController() {
+
+}
+
+
 
 
 

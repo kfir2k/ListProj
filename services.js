@@ -3,6 +3,7 @@ export class ShoppingList {
     constructor() {
         this.itemArry = [];
         this.index
+        this.obj
         // this.arrayObeject = {}
 
     }
@@ -11,30 +12,25 @@ export class ShoppingList {
         this.itemArry.push(item)
         this.index = this.itemArry.length
 
-        console.log("Item from service", this.itemArry);
-        console.log("index", this.index);
-        // this.arrayObeject = Object.assign({}, this.itemArry);
-        // this.arrayObeject.status = false;
-        // console.log(this.arrayObeject);
+        // console.log("Item from service", this.itemArry);
+        // console.log("index", this.index);
+        this.#displayItem(this.index)
     }
 
-    displayItem(number) {
+    #displayItem(id) {
 
-        console.log("=========================", number);
+        // console.log("=========================", id);
+        this.obj = this.itemArry[id - 1];
 
-
-
-        // let obj = this.itemArry[this.index]
-        // thisrender = `
-
-        //  ${this.index} , ${obj.text} , ${obj.amount}
+        this.render = `
+         ${this.index} | ${this.obj.itemDescription} | ${this.obj.amounts}  |
 
 
 
 
 
-        // `
-        // console.log(render);
+        `
+        console.log(this.render);
 
 
     }
@@ -44,7 +40,14 @@ export class ShoppingList {
     //     return this.itemArray;
     // }
 
-    deleteItemArry() {
+    deleteItemArry(id) {
+
+        const filteredArry = this.itemArry.splice(id)
+
+
+        // const result = this.itemArry.filter((id) => word === id);
+        // console.log("result of delete item from arry", result);
+        console.log("from delete", filteredArry);
 
     }
 
